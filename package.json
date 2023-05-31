@@ -2,9 +2,9 @@
   "name": "backend",
   "version": "1.0.0",
   "description": "",
-  "main": "dist/app.ts",
+  "main": "src/app.ts",
   "scripts": {
-    "dev": "nodemon ./dist/app.js"
+    "dev": "nodemon src/app.ts"
   },
   "keywords": [],
   "author": "",
