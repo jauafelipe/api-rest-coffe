@@ -2,9 +2,9 @@
   "name": "backend",
   "version": "1.0.0",
   "description": "",
-  "main": "src/app.ts",
+  "main": "dist/app.ts",
   "scripts": {
-    "dev": "nodemon ./src/app.ts"
+    "dev": "nodemon ./dist/app.js"
   },
   "keywords": [],
   "author": "",
@@ -22,7 +22,6 @@
     "mongodb": "^5.5.0",
     "mongoose": "^7.2.1",
     "nodemon": "^2.0.22",
-    "ts-node": "^10.9.1",
-    "uninstall": "^0.0.0"
+    "ts-node": "^10.9.1"
   }
 }

@@ -1,28 +1,30 @@
 import dotenv from "dotenv";
 dotenv.config()
-import express,{ Express } from "express";
+import express from "express";
 import cors from "cors";
 import bodyParser from "body-parser";
 import mongoose, { MongooseOptions } from "mongoose"
+
 import { router } from "./routes/routes";
-const app: Express = express();
 
 
 class App {
     private app: express.Application
     constructor() {
         this.app = express()
+        
         this.middlewares()
         this.routes()
         this.database()
         this.server()
     }
-    
+   
     public middlewares() {
         this.app.use(express.json())
         this.app.use(express.urlencoded({extended: true}))
         this.app.use(bodyParser.json())
         this.app.use(cors({credentials: true}))
+       
     }
     public routes():void {
         this.app.use(router)
